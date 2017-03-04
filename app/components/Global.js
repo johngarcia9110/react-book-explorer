@@ -3,6 +3,8 @@ import { FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
 import Gallery from './Gallery';
 
 class Global extends Component{
+
+
     constructor(props){
         super(props);
         this.state = {
@@ -23,7 +25,7 @@ class Global extends Component{
     render () {
         return (
             <div className="global">
-                <h2> Book Explorer! </h2>
+                <h1 className="logo white-text"> Google Play Book Explorer </h1>
                 <FormGroup>
                     <InputGroup>
                         <FormControl 
@@ -43,7 +45,7 @@ class Global extends Component{
                 </FormGroup>
                 <div className="container">
                     <div className="row">
-                        <Gallery items = {this.state.items}/>
+                        <Gallery items = {this.state.items} query = {this.state.query}/>
                     </div>
                 </div>
                 
