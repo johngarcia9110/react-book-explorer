@@ -1,3 +1,31 @@
 .global{
     text-align: center;
 }
+
+.book{
+    max-width: 200px;
+    margin: auto;
+    background: #ece9e9;
+    padding: 10px;
+    margin-bottom: 35px;
+    border-radius: 4px;
+    border: 2px solid #ccc9c9;
+    position: relative;
+}
+
+.book img{
+    max-width: 192px;
+}
+
+.book .book-title{
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    background: #9e9ec3;
+    color: white;
+    padding: 10px;
+}
+
+.book-title h3{
+    margin: 0;
+}

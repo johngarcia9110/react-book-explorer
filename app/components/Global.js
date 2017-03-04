@@ -16,7 +16,8 @@ class Global extends Component{
         .then(response => response.json())
         .then(json => {
             let {items} = json;
-            this.setState({items})
+            this.setState({items});
+            console.log(json);
         });
     }
     render () {
@@ -40,7 +41,12 @@ class Global extends Component{
                         </InputGroup.Addon>
                     </InputGroup>
                 </FormGroup>
-                <Gallery items = {this.state.items}/>
+                <div className="container">
+                    <div className="row">
+                        <Gallery items = {this.state.items}/>
+                    </div>
+                </div>
+                
             </div>
         )
     }
