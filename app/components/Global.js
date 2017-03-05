@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
 import Gallery from './Gallery';
 
+
 class Global extends Component{
-
-
     constructor(props){
         super(props);
         this.state = {
             query: '',
-            items: []
-        }
+            items: [],
+            lastQuery: ''
+        };
     }
     search(){
         const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
@@ -19,13 +19,18 @@ class Global extends Component{
         .then(json => {
             let {items} = json;
             this.setState({items});
+            this.setState({lastQuery : this.state.query });
             console.log(json);
         });
     }
+
     render () {
         return (
             <div className="global">
-                <h1 className="logo white-text"> Google Play Book Explorer </h1>
+                <div className="logo">
+                    <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/256/Play-Books-icon.png"/>
+                    <h1 className="logo-text"> Google Play Book Explorer </h1>
+                </div>
                 <FormGroup>
                     <InputGroup>
                         <FormControl 
@@ -43,12 +48,9 @@ class Global extends Component{
                         </InputGroup.Addon>
                     </InputGroup>
                 </FormGroup>
-                <div className="container">
-                    <div className="row">
-                        <Gallery items = {this.state.items} query = {this.state.query}/>
-                    </div>
-                </div>
-                
+                <Gallery items = {this.state.items} 
+                    query = {this.state.lastQuery} 
+                    />   
             </div>
         )
     }

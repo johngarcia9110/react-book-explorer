@@ -3,36 +3,84 @@
     color: #FFFFFF;
 }
 
+.white-background{
+   background-color: rgba(210, 242, 255, 0.76);
+}
+
 body{
     background-image: url(http://thepatternlibrary.com/img/ao.gif);
 }
 
 .global{
     text-align: center;
+    padding: 0px 10px;
 }
 
-.global .logo{
+.logo{
+    padding: 20px 0px;
+}
+
+.logo img{
+    max-width: 100px;
+}
+
+.global .logo-text{
+    display: inline;
     padding: 40px 0px;
     font-weight: bold;
-    text-shadow: 2px 2px 16px #3b3b4a;
+    color: #26272f;
+}
+
+.search-status{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 18px 0;
 }
 
 .book-column{
     min-height: 400px;
+    animation: fade-in 500ms ease-in-out; 
 }
 
-.book{
-    display: block;
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.book-wrapper{
     max-width: 300px;
     margin: auto;
     overflow: hidden;
-    background: #6f6f90;
+    background: #337ab7;
     background-image: radial-gradient(90px at 50% 41%, #ffffff -48%,rgba(0, 0, 0, 0) 209%);
     margin-bottom: 35px;
     border-radius: 4px;
     border: 2px solid #52526b;
     position: relative;
-    padding-top: 18px;
+}
+
+.book-wrapper .btn{
+    width: 100%;
+    font-size: 20px;
+}
+
+.book-wrapper .btn-primary{
+    background: #448c46;
+    border: none;
+    border-radius: 0px;
+}
+
+.book-wrapper .btn-primary:hover, .btn-primary:active{
+    background-color: #3e803f;
+    border: none;
+}
+
+.book{
+    display: block;
     cursor: pointer;
 }
 
@@ -40,9 +88,13 @@ body{
     text-decoration: none;
 }
 
-.book img{
+.book .book-image-wrapper{
+    height: 240px;
+    padding-top: 40px;
+}
+
+.book-image-wrapper img{
     max-width: 192px;
-    margin-bottom: 18px;
 }
 
 .book .book-price{
@@ -59,8 +111,11 @@ body{
 }
 
 .book .book-title{
-    background: #3b3b4a;
-    padding: 10px;
+    background: #28556b;
+    padding: 14px 10px;
+    display: border-box;
+    min-height: 100px;
+    position: relative;
 }
 
 .book-title h3{
