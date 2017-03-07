@@ -12,7 +12,7 @@
   "description": "A simple app using the google play store api",
   "main": "index.js",
   "scripts":{
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "build": "NODE_ENV=dev webpack --config ./webpack.prod.config.js --progress --colors",
     "start": "node app/app.js"
   },
   "repository": {

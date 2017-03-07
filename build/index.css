@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url(http://thepatternlibrary.com/img/ao.gif);
+    background-image: url(./image/ao.gif);
 }
 
 .global{
@@ -55,11 +55,11 @@ body{
     max-width: 300px;
     margin: auto;
     overflow: hidden;
-    background: #337ab7;
-    background-image: radial-gradient(90px at 50% 41%, #ffffff -48%,rgba(0, 0, 0, 0) 209%);
+    background: #272830;
+    background-image: radial-gradient(90px at 50% 41%, #aac3cf -48%,rgba(0, 0, 0, 0) 209%);
     margin-bottom: 35px;
     border-radius: 4px;
-    border: 2px solid #52526b;
+    /*border: 2px solid #272830;*/
     position: relative;
 }
 
@@ -69,13 +69,14 @@ body{
 }
 
 .book-wrapper .btn-primary{
-    background: #448c46;
+    background: #67737d;
     border: none;
     border-radius: 0px;
+    padding: 10px 0;
 }
 
 .book-wrapper .btn-primary:hover, .btn-primary:active{
-    background-color: #3e803f;
+    background-color: #515a63;
     border: none;
 }
 
@@ -105,13 +106,13 @@ body{
     position: absolute;
     top: 0;
     padding: 6px;
-    background: #448c46;
+    background: #272830;
     border-bottom-right-radius: 6px;
     box-shadow: 1px 1px 25px -10px black;
 }
 
 .book .book-title{
-    background: #28556b;
+    background: #272830;
     padding: 14px 10px;
     display: border-box;
     min-height: 100px;
